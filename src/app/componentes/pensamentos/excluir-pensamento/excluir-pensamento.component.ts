@@ -11,7 +11,7 @@ import { Pensamento } from '../pensamento';
 export class ExcluirPensamentoComponent implements OnInit {
 
   pensamento: Pensamento = {
-    id: '',
+    id: '0',
     conteudo: '',
     autoria: '',
     modelo: ''
@@ -25,16 +25,16 @@ export class ExcluirPensamentoComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.service.buscarPorId(id!).subscribe((pensamento) => {
-        this.pensamento = pensamento
+    this.service.buscarPorId((id!)).subscribe((pensamento) => {
+      this.pensamento = pensamento
     })
   }
 
   excluirPensamento() {
     if(this.pensamento.id) {
-        this.service.excluir(this.pensamento.id).subscribe(() => {
-            this.router.navigate(['/listarPensamento'])
-        })
+      this.service.excluir(this.pensamento.id).subscribe(() => {
+        this.router.navigate(['/listarPensamento'])
+      })
     }
   }
 

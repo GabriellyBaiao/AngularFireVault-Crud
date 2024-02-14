@@ -1,5 +1,4 @@
 .modal {
-  display: none;
   background: #fff;
   box-shadow: 7px 8px 0px 0px #154580;
   min-width: 360px;
@@ -16,7 +15,6 @@
 }
 
 .overlay {
-  display: none;
   background: #000;
   height: 100vh;
   left: 0;
