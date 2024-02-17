@@ -4,25 +4,36 @@
       "id": "3",
       "conteudo": "Angular é um máximo!",
       "autoria": "Gabi",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": "1cac",
       "conteudo": "Continue a codar... continue a codar...",
       "autoria": "Dory programadora",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": "958a",
       "conteudo": "Pensar em sucesso na programação é entender que cada desafio superado, cada erro corrigido e cada projeto concluído são degraus rumo à maestria. O verdadeiro sucesso está na jornada de aprendizado constante, na habilidade de enfrentar problemas com resiliência e na capacidade de contribuir para soluções que impactam positivamente o mundo digital",
       "autoria": "GabyJavaDevGirl",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": "87a2",
       "conteudo": "GABI SERÁ UMA GRANDE DEV!",
       "autoria": "aak",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "id": "191c",
+      "conteudo": "Na volta a gente compra",
+      "autoria": "mãe",
+      "modelo": "modelo2",
+      "favorito": true
     }
   ]
 }
