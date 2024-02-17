@@ -5,7 +5,7 @@
   <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input
-      type="textarea"
+      type="text"
       class="input"
       id="pensamento"
       formControlName="conteudo"
@@ -50,7 +50,7 @@
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
           <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
-          <p class="autoria"><b>{{ formulario.get('autoria')?.value  }}</b></p>
+          <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
         </div>
       </div>
 
@@ -71,7 +71,7 @@
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azul claro">
           <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
-          <p class="autoria"><b>{{ formulario.get('autoria')?.value  }}</b></p>
+          <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
         </div>
       </div>
 
@@ -92,12 +92,17 @@
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
           <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
-          <p class="autoria"><b>{{ formulario.get('autoria')?.value  }}</b></p>
+          <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
         </div>
       </div>
     </div>
     <div class="acoes">
-      <button (click)="criarPensamento()" class="botao">Salvar</button>
+      <button
+        [disabled]="!formulario.valid"
+        (click)="criarPensamento()"
+        [ngClass]="habilitarBotao()"
+        >Salvar
+      </button>
       <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
